@@ -23,4 +23,5 @@ This article is going to focus on Login, Registration, Password update, Logout w
 2. create database `basic_security`
 3. change databse username and password
 4. go to browser and enter `http:localhost:8092/`
-5. in the login page below click on registraion link
+5. create a folder on local directory for where Lucene should store the index. now define path on application.properties on `spring.jpa.properties.hibernate.search.default.indexBase = D:/work-space/hibernet_serach_store/`
+6. in the login page below click on registraion link
