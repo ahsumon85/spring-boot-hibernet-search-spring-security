@@ -15,10 +15,10 @@ Hibernate Search also provides an Elasticsearch integration; however, as it's st
 ### Spring Security Form Login
 This article is going to focus on Login, Registration, Password update, Logout with Spring Security. We're going to build on top of the simple previous Spring MVC example, as that's a necessary part of setting up the web application along with the login mechanism.
 
-### spring-boot-hibernet-search-spring-security project import
+### Spring-boot-hibernet-search-spring-security project import
 1. `git clone https://github.com/ahasanhabibsumon/spring-boot-hibernet-search.git`
 
-### spring-boot-hibernet-search-spring-security project run
+### Spring-boot-hibernet-search-spring-security project run
 1. import on IDE
 2. create database `basic_security`
 3. change databse username and password
