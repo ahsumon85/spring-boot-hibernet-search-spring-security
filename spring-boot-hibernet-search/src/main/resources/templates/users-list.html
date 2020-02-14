@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+<title>Users list</title>
+<th:block th:include="layout/header"></th:block>
+</head>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+<body style="background-color: #DADBDB">
+	<br />
+	<div class="container">
+		<div>
+			<div class="panel-heading">
+				<form class="form-horizontal" action="#" th:action="@{/user}"
+					th:object="${search}">
+					<div class="col-md-6 ">
+						<input id="myInput" class="form-control" type="text" name="value"
+							placeholder="Search users..." aria-label="Search" />
+					</div>
+				</form>
+			</div>
+
+			<br /> <br />
+			<table class="table table-hover table-success"
+				th:if="${not #lists.isEmpty(users)}">
+				<thead>
+					<tr>
+						<th scope="col">User ID</th>
+						<th scope="col">User name</th>
+						<th scope="col">Age</th>
+						<th scope="col">Email</th>
+						<th scope="col">Phone</th>
+
+					</tr>
+				</thead>
+				<tbody id="myTable">
+					<tr th:each="value, rowStat : ${users}">
+						<th th:text="${rowStat.count}"></th>
+						<td th:text="${value.firstName}">Name</td>
+						<td th:text="${value.birthDate}">age</td>
+						<td th:text="${value.email}">email</td>
+						<td th:text="${value.phone}">phone</td>
+					</tr>
+				</tbody>
+			</table>
+
+
+		</div>
+
+	</div>
+</body>
+</html>
+
